@@ -1,1 +1,1417 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<!-- ADAPTACIÓN PARA CELULARES 📱 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Para Julio 💙</title>
+
+<style>
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#050b14;
+    color:white;
+    overflow-x:hidden;
+    transition:0.5s;
+    width:100%;
+    min-height:100vh;
+}
+
+/* =========================================
+   FONDO
+========================================= */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-2;
+
+    background:
+        radial-gradient(circle at 20% 20%, #008cff55, transparent 30%),
+        radial-gradient(circle at 80% 80%, #00d9ff44, transparent 30%),
+        linear-gradient(135deg,#02050a,#061525,#001f35);
+}
+
+/* =========================================
+   ESTRELLAS
+========================================= */
+
+.star{
+    position:fixed;
+    color:#8eeaff;
+    font-size:15px;
+    animation:float 5s infinite ease-in-out;
+    opacity:.7;
+    z-index:-1;
+}
+
+.star:nth-child(1){
+    left:10%;
+    top:15%;
+    animation-delay:1s;
+}
+
+.star:nth-child(2){
+    left:80%;
+    top:20%;
+    animation-delay:2s;
+}
+
+.star:nth-child(3){
+    left:20%;
+    top:70%;
+    animation-delay:3s;
+}
+
+.star:nth-child(4){
+    left:75%;
+    top:75%;
+    animation-delay:1.5s;
+}
+
+.star:nth-child(5){
+    left:50%;
+    top:10%;
+    animation-delay:2.5s;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0) scale(1);
+    }
+
+    50%{
+        transform:translateY(-20px) scale(1.3);
+    }
+
+}
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:auto;
+}
+
+/* =========================================
+   INICIO
+========================================= */
+
+.hero{
+    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:30px 0;
+}
+
+.card{
+    width:100%;
+
+    background:rgba(4,15,29,.88);
+
+    border:2px solid #1da9ff;
+
+    border-radius:30px;
+
+    padding:45px 30px;
+
+    box-shadow:
+        0 0 25px #008cff44,
+        0 0 70px #00d9ff22;
+
+    backdrop-filter:blur(10px);
+
+    animation:appear 1.2s ease;
+}
+
+@keyframes appear{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================================
+   PERSONAJE ESTILO POCOYÓ
+========================================= */
+
+.character{
+    width:120px;
+    height:120px;
+
+    background:#22aaff;
+
+    border-radius:50%;
+
+    margin:0 auto 25px;
+
+    position:relative;
+
+    box-shadow:0 0 35px #00bfff88;
+}
+
+.character:before{
+    content:"";
+
+    position:absolute;
+
+    width:75px;
+    height:55px;
+
+    background:#dff8ff;
+
+    border-radius:50%;
+
+    left:22px;
+    top:35px;
+}
+
+.eye{
+    position:absolute;
+
+    width:10px;
+    height:14px;
+
+    background:#061525;
+
+    border-radius:50%;
+
+    top:52px;
+
+    z-index:2;
+}
+
+.eye.left{
+    left:43px;
+}
+
+.eye.right{
+    right:43px;
+}
+
+.mouth{
+    position:absolute;
+
+    width:22px;
+    height:10px;
+
+    border-bottom:3px solid #061525;
+
+    border-radius:50%;
+
+    left:49px;
+    top:72px;
+
+    z-index:2;
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+h1{
+    font-size:clamp(38px,8vw,70px);
+
+    color:#7ce7ff;
+
+    margin-bottom:10px;
+
+    text-shadow:0 0 20px #00bfff88;
+}
+
+.subtitle{
+    font-size:20px;
+
+    color:#c7eaff;
+
+    margin-bottom:25px;
+
+    line-height:1.5;
+}
+
+.name{
+    color:#159cff;
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+    margin-top:30px;
+}
+
+button{
+
+    border:none;
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(135deg,#078cff,#00cfff);
+
+    color:white;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 5px 15px #008cff44;
+
+    min-height:50px;
+}
+
+button:hover{
+
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:0 10px 25px #00cfff66;
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+.message{
+
+    margin-top:30px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:#071b30;
+
+    border:1px solid #159cff;
+
+    min-height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    color:#e4f8ff;
+
+    transition:.4s;
+}
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+section{
+    padding:80px 0;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:38px;
+
+    color:#6edfff;
+
+    margin-bottom:30px;
+}
+
+.box{
+
+    background:#071522;
+
+    border:1px solid #147dcc;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 10px 30px #00000055;
+
+    transition:.3s;
+}
+
+.box:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#5ee5ff;
+
+}
+
+.box h3{
+
+    color:#21bfff;
+
+    margin-bottom:12px;
+
+    font-size:23px;
+}
+
+.box p{
+
+    color:#d7edf7;
+
+    line-height:1.7;
+
+    font-size:17px;
+}
+
+/* =========================================
+   FRASES
+========================================= */
+
+.quote{
+
+    text-align:center;
+
+    font-size:25px;
+
+    color:#ffffff;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(135deg,#06315a,#061421);
+
+    border:2px solid #00bfff;
+
+    box-shadow:0 0 30px #00bfff22;
+
+    line-height:1.5;
+}
+
+/* =========================================
+   CARTA
+========================================= */
+
+.letter{
+
+    background:#020911;
+
+    border:2px dashed #159cff;
+
+    border-radius:25px;
+
+    padding:35px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    color:#dff8ff;
+}
+
+.letter strong{
+    color:#4fdcff;
+}
+
+/* =========================================
+   SORPRESA
+========================================= */
+
+.surprise{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    background:
+        linear-gradient(135deg,#008cff,#005b9e);
+
+    animation:pop .6s ease;
+}
+
+@keyframes pop{
+
+    0%{
+        transform:scale(.5);
+        opacity:0;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+.surprise h2{
+
+    font-size:30px;
+
+    margin-bottom:15px;
+}
+
+.surprise p{
+
+    font-size:19px;
+
+    line-height:1.6;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    color:#8acfe9;
+
+    line-height:1.8;
+}
+
+footer span{
+    color:#22bfff;
+}
+
+/* =========================================
+   MODO CLARO
+========================================= */
+
+.light{
+
+    background:#dff8ff;
+
+    color:#061525;
+}
+
+.light .background{
+
+    background:
+
+        radial-gradient(
+            circle at 20% 20%,
+            #00bfff55,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #008cff44,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #dff8ff,
+            #aeeeff
+        );
+}
+
+.light .card,
+.light .box,
+.light .message,
+.light .letter{
+
+    background:#ffffffdd;
+
+    color:#061525;
+}
+
+.light .box p,
+.light .letter,
+.light .message{
+
+    color:#183b50;
+}
+
+/* =========================================
+   CELULARES
+========================================= */
+
+@media(max-width:600px){
+
+    .container{
+        width:92%;
+    }
+
+    .hero{
+        padding:20px 0;
+    }
+
+    .card{
+
+        padding:30px 18px;
+
+        border-radius:24px;
+    }
+
+    .character{
+
+        width:100px;
+
+        height:100px;
+
+        margin-bottom:20px;
+    }
+
+    .character:before{
+
+        width:63px;
+
+        height:46px;
+
+        left:18px;
+
+        top:30px;
+    }
+
+    .eye{
+
+        width:8px;
+
+        height:12px;
+
+        top:43px;
+    }
+
+    .eye.left{
+        left:36px;
+    }
+
+    .eye.right{
+        right:36px;
+    }
+
+    .mouth{
+
+        width:18px;
+
+        left:41px;
+
+        top:60px;
+    }
+
+    h1{
+
+        font-size:48px;
+    }
+
+    .subtitle{
+
+        font-size:17px;
+
+        line-height:1.5;
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+        width:100%;
+    }
+
+    button{
+
+        width:100%;
+
+        font-size:15px;
+
+        padding:14px 12px;
+    }
+
+    .message{
+
+        font-size:16px;
+
+        padding:20px;
+
+        line-height:1.5;
+    }
+
+    section{
+
+        padding:55px 0;
+    }
+
+    .section-title{
+
+        font-size:30px;
+
+        line-height:1.3;
+    }
+
+    .box{
+
+        padding:23px 18px;
+
+        border-radius:20px;
+    }
+
+    .box h3{
+
+        font-size:21px;
+    }
+
+    .box p{
+
+        font-size:16px;
+
+        line-height:1.6;
+    }
+
+    .quote{
+
+        font-size:20px;
+
+        padding:25px 18px;
+
+        line-height:1.5;
+    }
+
+    .letter{
+
+        padding:23px 18px;
+
+        font-size:16px;
+
+        line-height:1.8;
+    }
+
+    .surprise{
+
+        padding:25px 18px;
+    }
+
+    .surprise h2{
+
+        font-size:25px;
+    }
+
+    .surprise p{
+
+        font-size:17px;
+    }
+
+    footer{
+
+        padding:30px 15px;
+
+        font-size:14px;
+    }
+
+}
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+========================================= */
+
+@media(max-width:380px){
+
+    .container{
+        width:94%;
+    }
+
+    .card{
+        padding:25px 15px;
+    }
+
+    h1{
+        font-size:42px;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+
+    .message{
+        font-size:15px;
+    }
+
+    .letter{
+        font-size:15px;
+    }
+
+}
+
+/* =========================================
+   PANTALLAS TÁCTILES
+========================================= */
+
+@media(hover:none){
+
+    button:hover{
+
+        transform:none;
+
+        box-shadow:0 5px 15px #008cff44;
+    }
+
+    .box:hover{
+
+        transform:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- ESTRELLAS -->
+
+<div class="star">✦</div>
+<div class="star">★</div>
+<div class="star">✦</div>
+<div class="star">★</div>
+<div class="star">✦</div>
+
+
+<!-- =========================================
+     INICIO
+========================================= -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="card">
+
+<div class="character">
+
+<div class="eye left"></div>
+
+<div class="eye right"></div>
+
+<div class="mouth"></div>
+
+</div>
+
+<h1>Julio 💙</h1>
+
+<p class="subtitle">
+
+Esto es para recordarte algo que nunca debes olvidar.
+
+</p>
+
+<p>
+
+<strong class="name">
+
+Tu valor no depende de quien decidió no verlo.
+
+</strong>
+
+</p>
+
+
+<div class="buttons">
+
+<button onclick="mensaje()">
+
+💙 Leer esto
+
+</button>
+
+<button onclick="valor()">
+
+⭐ Recordarme mi valor
+
+</button>
+
+<button onclick="amigo()">
+
+🤝 Siempre cuentas conmigo
+
+</button>
+
+<button onclick="sorpresa()">
+
+🎁 Sorpresa
+
+</button>
+
+<button onclick="modo()">
+
+🌙 Cambiar modo
+
+</button>
+
+</div>
+
+
+<div class="message" id="mensaje">
+
+Haz clic en uno de los botones,
+Julio. Hay algo que quiero decirte.
+
+</div>
+
+
+<div class="surprise" id="surprise">
+
+<h2>💙 Julio, recuerda esto</h2>
+
+<p>
+
+No perdiste tu valor porque alguien no supo apreciarte.
+
+<br><br>
+
+No tienes que demostrarle nada a nadie.
+
+<br><br>
+
+Levanta la cabeza.
+Sigue siendo tú.
+
+<br><br>
+
+Y cuando necesites a alguien...
+
+<strong>yo voy a estar ahí. 🤝</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     TU VALOR
+========================================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+
+⭐ Que nunca se te olvide
+
+</h2>
+
+
+<div class="box">
+
+<h3>
+
+Tu valor no depende de una persona
+
+</h3>
+
+<p>
+
+Que alguien no haya sabido valorarte no significa que no tengas valor.
+A veces simplemente damos nuestro cariño a personas que no saben qué hacer con él.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>
+
+No necesitas perseguir a nadie
+
+</h3>
+
+<p>
+
+El cariño verdadero no debería hacerte sentir que tienes que rogar por atención,
+cariño o respeto. Tú también mereces recibir todo lo que das.
+
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h3>
+
+Esta ruptura no define quién eres
+
+</h3>
+
+<p>
+
+Esto es solamente una etapa.
+No es el final de tu historia.
+Todavía te quedan muchísimas cosas buenas por vivir.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     FRASE
+========================================= -->
+
+<section>
+
+<div class="container">
+
+<div class="quote" id="quote">
+
+"Que no te hayan valorado no significa que valgas menos.
+Significa que estaban mirando al lugar equivocado."
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     CARTA
+========================================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+
+💙 De tu mejor amiga
+
+</h2>
+
+
+<div class="letter">
+
+<p>
+
+<strong>Julio:</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Sé que ahora mismo probablemente no estés pasando por tu mejor momento.
+Y sé que una ruptura puede hacer que uno empiece a cuestionarse muchas cosas.
+
+</p>
+
+<br>
+
+<p>
+
+Pero quiero que recuerdes algo:
+
+<strong>
+que una persona no te haya valorado no significa que no seas suficiente.
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+No quiero que cambies quién eres para conseguir que alguien se quede.
+No quiero que pienses que te faltó algo.
+No quiero que te culpes por haber querido de verdad.
+
+</p>
+
+<br>
+
+<p>
+
+Tú diste lo que pudiste dar.
+Y eso habla mucho de tu corazón.
+
+</p>
+
+<br>
+
+<p>
+
+Ahora toca volver a ti.
+Volver a reír.
+Volver a hacer las cosas que te gustan.
+Volver a sentirte orgulloso de la persona que eres.
+
+</p>
+
+<br>
+
+<p>
+
+Y sobre todo quiero que sepas algo:
+
+<strong>
+no tienes que pasar por esto solo.
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+Si quieres hablar, hablamos.
+Si quieres distraerte, nos distraemos.
+Si quieres salir, salimos.
+Y si simplemente quieres estar en silencio,
+también puedo quedarme ahí contigo.
+
+</p>
+
+<br>
+
+<p>
+
+Porque eres mi mejor amigo y,
+aunque la vida se ponga complicada,
+
+<strong>
+siempre vas a contar conmigo. 💙
+</strong>
+
+</p>
+
+<br>
+
+<p>
+
+No olvides quién eres, Julio.
+
+</p>
+
+<br>
+
+<p>
+
+<strong>
+Te esperan cosas mucho mejores. ⭐
+</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+<p>
+
+Hecho especialmente para
+<span>Julio 💙</span>
+
+</p>
+
+<p>
+
+Porque los verdaderos amigos también están en los días difíciles.
+
+</p>
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+function mensaje(){
+
+    const mensajes = [
+
+        "Julio, no permitas que una ruptura te haga olvidar todo lo bueno que tienes. 💙",
+
+        "No eres difícil de querer. Simplemente estabas intentando ser querido por la persona equivocada.",
+
+        "Algún día mirarás atrás y entenderás que perder a esa persona no significaba perderte a ti.",
+
+        "No tienes que convencer a nadie de tu valor. La persona correcta lo verá sin que tengas que pedirlo.",
+
+        "Hoy puede doler, pero este dolor no va a durar para siempre. Tú vas a estar bien. ⭐"
+
+    ];
+
+    const random =
+        mensajes[Math.floor(Math.random()*mensajes.length)];
+
+    document.getElementById("mensaje").innerHTML =
+        random;
+
+}
+
+
+/* =========================================
+   VALOR
+========================================= */
+
+function valor(){
+
+    const frases = [
+
+        "⭐ Eres suficiente.",
+
+        "💙 Mereces respeto y cariño.",
+
+        "🔥 Tienes muchísimo que ofrecer.",
+
+        "🌟 No necesitas la aprobación de nadie.",
+
+        "🫶 Tu forma de querer también es algo valioso.",
+
+        "🚀 Todavía tienes muchísimo por vivir.",
+
+        "👑 Nunca olvides lo que vales."
+
+    ];
+
+    const random =
+        frases[Math.floor(Math.random()*frases.length)];
+
+    document.getElementById("mensaje").innerHTML =
+        "<strong>" + random + "</strong>";
+
+}
+
+
+/* =========================================
+   MEJOR AMIGA
+========================================= */
+
+function amigo(){
+
+    document.getElementById("mensaje").innerHTML =
+
+    "🤝 <strong>Julio, pase lo que pase, cuentas conmigo.</strong><br><br>" +
+
+    "No importa si estás feliz, triste, enojado o simplemente necesitas distraerte. " +
+
+    "No tienes que cargar todo tú solo. Aquí tienes a alguien que te escucha y que siempre va a querer verte bien. 💙";
+
+}
+
+
+/* =========================================
+   SORPRESA
+========================================= */
+
+function sorpresa(){
+
+    const caja =
+        document.getElementById("surprise");
+
+    if(caja.style.display === "block"){
+
+        caja.style.display = "none";
+
+    }else{
+
+        caja.style.display = "block";
+
+        crearEstrellas();
+
+    }
+
+}
+
+
+/* =========================================
+   ESTRELLAS EXTRA
+========================================= */
+
+function crearEstrellas(){
+
+    for(let i=0;i<15;i++){
+
+        const estrella =
+            document.createElement("div");
+
+        estrella.innerHTML =
+            Math.random() > .5 ? "★" : "✦";
+
+        estrella.style.position =
+            "fixed";
+
+        estrella.style.left =
+            Math.random()*100 + "%";
+
+        estrella.style.top =
+            Math.random()*100 + "%";
+
+        estrella.style.color =
+            "#55ddff";
+
+        estrella.style.fontSize =
+            (10 + Math.random()*20) + "px";
+
+        estrella.style.pointerEvents =
+            "none";
+
+        estrella.style.animation =
+            "float 3s ease-in-out";
+
+        document.body.appendChild(estrella);
+
+        setTimeout(()=>{
+
+            estrella.remove();
+
+        },3000);
+
+    }
+
+}
+
+
+/* =========================================
+   CAMBIAR MODO
+========================================= */
+
+function modo(){
+
+    document.body.classList.toggle("light");
+
+}
+
+
+/* =========================================
+   FRASES AUTOMÁTICAS
+========================================= */
+
+const frases = [
+
+    "Tu valor no disminuye porque alguien no supo verlo. 💙",
+
+    "A veces perder a alguien es la forma de volver a encontrarte a ti mismo.",
+
+    "No persigas a quien decidió irse. Camina hacia todo lo que todavía te espera.",
+
+    "El corazón también necesita tiempo para volver a sentirse en casa.",
+
+    "Un mal capítulo no significa una mala historia.",
+
+    "Julio, todavía vienen días increíbles para ti. ⭐"
+
+];
+
+let indice = 0;
+
+setInterval(()=>{
+
+    indice++;
+
+    if(indice >= frases.length){
+
+        indice = 0;
+
+    }
+
+    document.getElementById("quote").innerHTML =
+        '"' + frases[indice] + '"';
+
+},5000);
+
+</script>
+
+</body>
+
+</html>
